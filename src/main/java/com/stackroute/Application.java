@@ -18,9 +18,9 @@ public class Application
     {
         //using ApplicationContext to create the bean
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie = context.getBean("movieid",Movie.class);
-        movie.display();
-        Movie movie2 = context.getBean("movieid2",Movie.class);
-        movie2.display();
+        Movie movie = context.getBean("movieA", Movie.class);
+        Movie movie1 = context.getBean("movie", Movie.class);
+       // System.out.println(movie==movie1);
+        System.out.println(movie1.toString());
     }
 }
