@@ -4,21 +4,21 @@ import java.util.List;
 
 public class Movie {
 
-    Actor actor;
+    List<Actor> actor;
 
-    public void setActor(Actor actor) {
+
+
+    public Movie(List<Actor> actor) {
         this.actor = actor;
+
     }
 
-    public Actor getActor() {
-        return actor;
-    }
 
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "actor=" + actor +
-                '}';
+
+    public void display()
+    {
+        System.out.println(actor.toString());
+
     }
 
 }
