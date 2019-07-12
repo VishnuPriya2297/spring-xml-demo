@@ -4,45 +4,24 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="actor-id" class="com.stackroute.domain.Actor">
-        <constructor-arg name="name" value="Mahesh"/>
-        <constructor-arg name="gender" value="Male"/>
-        <constructor-arg name="age" value="45"/>
-    </bean>
+    <!--beans for the class Actor-->
+    <bean id="movieid" class="com.stackroute.domain.Movie" autowire="byName"/>
 
-    <bean id="actor-id2" class="com.stackroute.domain.Actor">
-        <constructor-arg name="name" value="Hrithik"/>
-        <constructor-arg name="gender" value="Male"/>
-        <constructor-arg name="age" value="35"/>
-    </bean>
-
-    <bean id="actor-id3" class="com.stackroute.domain.Actor">
-        <constructor-arg name="name" value="Surya"/>
-        <constructor-arg name="gender" value="Male"/>
-        <constructor-arg name="age" value="37"/>
-    </bean>
-
-    <!-- <bean id="movie-id" class="com.stackroute.domain.Movie" >
-          <constructor-arg name="actor" ref="actor-id"/>
-
-      </bean>
-
-     <bean id="movie-id2" class="com.stackroute.domain.Movie" scope="prototype">
-      <constructor-arg name="actor" ref="actor-id2"/>
-      </bean>
-
-      <bean id="movie-id3" class="com.stackroute.domain.Movie">
-          <constructor-arg name="actor" ref="actor-id3"/>
-      </bean>-->
-    <bean name="movie-id1 ,movie-id2" scope="prototype" class="com.stackroute.domain.Movie">
-        <constructor-arg name="actor" >
-            <list>
-                <ref bean="actor-id"/>
-                <ref bean="actor-id2"/>
-                <ref bean="actor-id3"/>
-            </list>
+    <bean id="movieid2" class="com.stackroute.domain.Movie">
+        <constructor-arg name="actor" ref="actor1">
         </constructor-arg>
+    </bean>
 
+    <bean id="actor" class="com.stackroute.domain.Actor">
+        <property name="name" value="sharukh"/><!--injecting the values through constructor-->
+        <property name="gender" value="male"/>
+        <property name="age" value="50"/>
+    </bean>
+
+    <bean id="actor1" class="com.stackroute.domain.Actor">
+        <property name="name" value="amirkhan"/><!--injecting the values through constructor-->
+        <property name="gender" value="male"/>
+        <property name="age" value="50"/>
     </bean>
 
 

@@ -4,13 +4,21 @@ import java.util.List;
 
 public class Movie {
 
-    List<Actor> actor;
+    public Movie()
+    {
 
-
-
-    public Movie(List<Actor> actor) {
+    }
+    public Movie(Actor actor) {
         this.actor = actor;
+    }
 
+    Actor actor;
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
     }
 
 
@@ -18,7 +26,6 @@ public class Movie {
     public void display()
     {
         System.out.println(actor.toString());
-
     }
 
 }
