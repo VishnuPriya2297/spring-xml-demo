@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
+<!--creating a bean BeanLifeCycleDemo class and using init and destroy methods-->
     <bean id="beanlifecycle-id" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="custominit" destroy-method="customdestroy">
         <property name="name" value="vishnu priya "/>
     </bean>
