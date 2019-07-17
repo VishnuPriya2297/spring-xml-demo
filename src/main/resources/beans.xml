@@ -3,9 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+<!--creating a bean for movie-->
    <bean id="movie" class="com.stackroute.domain.Movie">
-        <property name="actor">
+        <property name="actor"><!--adding actor details using properity setter injection-->
         <bean class="com.stackroute.domain.Actor">
             <property name="name" value ="Mahesh"/>
             <property name="gender" value="Male"/>
