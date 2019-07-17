@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+<!-- creating beans for actors-->
     <bean id="actor-id" class="com.stackroute.domain.Actor">
         <constructor-arg name="name" value="Mahesh"/>
         <constructor-arg name="gender" value="Male"/>
@@ -34,6 +34,7 @@
       <bean id="movie-id3" class="com.stackroute.domain.Movie">
           <constructor-arg name="actor" ref="actor-id3"/>
       </bean>-->
+       <!--passing the actor beans using reference and changing the scope to prototype-->
     <bean name="movie-id1 ,movie-id2" scope="prototype" class="com.stackroute.domain.Movie">
         <constructor-arg name="actor" >
             <list>
