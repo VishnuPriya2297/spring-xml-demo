@@ -4,10 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
+<!-- creating a bean for BeanLifeCycleDemo -->
   <bean id="beanlifecycle-id" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="custominit" destroy-method="customdestroy">
         <property name="name" value="vishnu priya "/>
     </bean>
+       <!--creating bean for BeanPostProcessorDemo -->
     <bean id="processordemodean-id" class="com.stackroute.demo.BeanPostProcessorDemoBean">
 
     </bean>
